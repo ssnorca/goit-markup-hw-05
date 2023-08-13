@@ -460,6 +460,30 @@ img {
 .projects > li {
   border-bottom: 1px solid var(--cornflower);
 }
+.project-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.project-cover {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 40px 32px;
+  background-color: var(--iris, #4d5ae5);
+  color: var(--cloud, #f4f4fd);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project:hover .project-cover,
+.project:focus .project-cover {
+  transform: translateY(0);
+}
 
 .partners {
   display: flex;
